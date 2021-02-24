@@ -60,3 +60,4 @@ Cron will email to the user all output of the commands it runs, to silence this,
 
 crontab online calculation tool : https://tool.lu/crontab/
 
+Reprinted from https://www.tutorialspoint.com/unix_commands/crontab.htm
