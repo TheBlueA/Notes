@@ -36,3 +36,5 @@ public static void setElementValue(WebElement element,String value){
         element.click(); 
 }
 ```
+
+本文转载自：https://www.cnblogs.com/xinxin1994/p/10822730.html
