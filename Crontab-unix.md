@@ -70,7 +70,7 @@ Reprinted from https://www.tutorialspoint.com/unix_commands/crontab.htm
 
 ``` 59 12 * * * simon /usr/bin/sample.sh> /dev/null 2>＆1 ``` 
 
-以下为其详解：
+以下为 /dev/null 2>＆1 其详解：
 
 +  `>` 代表重定向；
 
@@ -94,4 +94,5 @@ Reprinted from https://www.tutorialspoint.com/unix_commands/crontab.htm
 
 - 表示将stdout直接送向file， stderr 继承了FD1管道后，再被送往file，此时，file 只被打开一次，也只使用了一个管道FD1，它包括了stdout和stderr的全部内容。从IO效率上讲，前一条命令的效率比后一条命令的效率要低，所以在编写shell脚本时，我们较多会用**command > file 2>&1** 这样的写法。
 
+转载自 https://blog.51cto.com/firelong/1763289
 
