@@ -1,0 +1,22 @@
+#### Using sqlplus to connect database without installing Oracle client:
+
+1. Download ( http://www.oracle.com/technetwork/topics/winx64soft-089540.html )
+  instantclient-basic-windows.x64-11.2.0.4.0.zip
+  instantclient-sqlplus-windows.x64-11.2.0.4.0.zip
+  instantclient-sdk-windows.x64-11.2.0.4.0.zip
+
+2. Unzip all the files to the same directory and you will get a folder called  instantclient_11_2
+
+3. Configure environment variables （This PC -> properties-> Advanced system settings -> Environment Variables）：
+
+New System Variable
+
+  - TNS_ADMIN=D:\oracle\instantclient_11_2
+
+  - NLS_LANG=SIMPLIFIED CHINESE_CHINA.ZHS16GBK
+
+add path variable value ： unzip path\instantclient_11_2;unzip path\instantclient_11_2\sdk;
+
+5. window+r--->cmd 
+ sqlplus user/pwd@ip:port/sid
+
