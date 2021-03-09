@@ -25,3 +25,18 @@
 
 
 原文链接：https://blog.csdn.net/zzk00007/article/details/96868057
+
+----
+
+### Send email
+After input the main content of email , Press Ctrl + D and  would display EOT
+```
+mailx/mail -s  "subject Name" emailAddress
+hi, 
+xxx
+(main content)
+EOT
+```
+
+
+
