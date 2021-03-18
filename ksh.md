@@ -50,7 +50,7 @@ EOT
 
 ----
 tee 从标准输入设备读取数据，将其内容输出到标准输出设备
--a或--append 　附加到既有文件的后面，而非覆盖它．
--i或--ignore-interrupts 　忽略中断信号。
---help 　在线帮助。
---version 　显示版本信息。
+- -a或--append 　附加到既有文件的后面，而非覆盖它．
+- -i或--ignore-interrupts 　忽略中断信号。
+- --help 　在线帮助。
+- -version 　显示版本信息。
