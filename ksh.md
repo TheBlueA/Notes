@@ -74,6 +74,10 @@ EOF
 
 ```
 
+3.  send email with attachment
+ ```
+ (print $content; uuencode $logfile $logfilename ) | mailx   -s "$subject" -c $cc_email_list "$email_list" 
+```
 
 -----
 
