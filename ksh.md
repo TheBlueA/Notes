@@ -44,6 +44,9 @@ content  can be use **\n**   to implement line feed
 
 ```
 print $content | mailx -s "$subject" -c $cc_email_list "$email_list" 
+eg：
+print "${sql_log}\n testmailx" | mailx -s "text test "  "xxx@outlook.com"  
+
 ```
 
 
