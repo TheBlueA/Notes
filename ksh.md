@@ -41,11 +41,36 @@ EOT
 ## use shell to send eamil 
 content  can be use **\n**   to implement line feed
 
-
+1. 
 ```
 print $content | mailx -s "$subject" -c $cc_email_list "$email_list" 
 eg：
 print "${sql_log}\n testmailx" | mailx -s "text test "  "xxx@outlook.com"  
+
+```
+2.
+```
+send_email_withCC xx.txt "subject " \
+"Hi all,
+xxx : ${text}" \
+"xxx@xx.com"  "xxx@xx.com" 
+
+send_email_withCC()
+{
+  typeset logfile=$1
+  typeset subject=$2
+  typeset content=$3
+  typeset email_list=$4
+  typeset cc_email_list=$5
+  [ "$logfile" = "" ] || typeset logfilename=`basename $logfile`
+  
+  mailx -s "$subject" -c $cc_email_list "$email_list" <<EOF
+$content
+EOF
+
+# print $content | mailx -s "$subject" -c $cc_email_list "$email_list" 
+
+}
 
 ```
 
