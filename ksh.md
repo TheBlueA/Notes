@@ -38,6 +38,15 @@ xxx
 EOT
 ```
 
+## use shell to send eamil 
+content  can be use **\n**   to implement line feed
+
+
+```
+print $content | mailx -s "$subject" -c $cc_email_list "$email_list" 
+```
+
+
 -----
 
 + $0	当前脚本的文件名
