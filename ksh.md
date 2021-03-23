@@ -95,3 +95,5 @@ tee 从标准输入设备读取数据，将其内容输出到标准输出设备
 - -i或--ignore-interrupts 　忽略中断信号。
 - --help 　在线帮助。
 - -version 　显示版本信息。
+
+ls -ltr s*  show deatails of start with s 
