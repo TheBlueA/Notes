@@ -79,6 +79,46 @@ EOF
  (print $content; uuencode $logfile $logfilename ) | mailx   -s "$subject" -c $cc_email_list "$email_list" 
 ```
 
+3.1. send multp attachment
+```
+send_email_withC1()
+{
+
+  typeset logfiles=$1
+  typeset subject=$2
+  typeset content=$3
+  typeset email_list=$4
+  typeset cc_email_list=$5
+  typeset content_attachment
+  typeset tmp_email=$$
+  
+  content=$content"\nJob End Time: "`date '+%Y%m%d %H:%M:%S'`
+
+  content_attachment='print '" $content "
+  $content_attachment > $tmp_email.mail
+  
+  for log in ${logfiles[@]}
+  do
+	
+ 	logfilename=`basename $log`
+ 
+  #key
+ 	uuencode $log $logfilename >> $tmp_email.mail   
+
+  done
+ 
+  mailx  -s "$subject" -c $cc_email_list "$email_list" < $tmp_email.mail
+  
+  `rm $tmp_email.mail`	
+}
+
+
+
+```
+
+
+
+
 -----
 
 + $0	当前脚本的文件名
