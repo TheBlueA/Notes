@@ -140,7 +140,7 @@ tee 从标准输入设备读取数据，将其内容输出到标准输出设备
 ls -ltr s*  show deatails of start with s 
 
 
-show last day of last month
+### show last day of last month
 
 cal mm yy (get calendar of yyyymm) 
 eg:
