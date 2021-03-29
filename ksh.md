@@ -136,4 +136,23 @@ tee 从标准输入设备读取数据，将其内容输出到标准输出设备
 - --help 　在线帮助。
 - -version 　显示版本信息。
 
+
 ls -ltr s*  show deatails of start with s 
+
+
+show last day of last month
+
+cal mm yy (get calendar of yyyymm) 
+eg:
+
+![image](https://user-images.githubusercontent.com/37216174/112797530-1a92e880-909e-11eb-8bb8-bfce18b75677.png)
+
+```
+cal month(%m) 2007(year %Y) | grep -v "^$"(for del empty line) | tail -1 (get last line)| awk '{print $NF}' (get last day)
+eg：
+cal 2 2007 | grep -v "^$" | tail -1 | awk '{print $NF}'
+
+```
+
+
+
