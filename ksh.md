@@ -140,7 +140,7 @@ tee 从标准输入设备读取数据，将其内容输出到标准输出设备
 ls -ltr s*  show deatails of start with s 
 
 
-### show last day of last month
+### show last day of which month year
 
 cal mm yy (get calendar of yyyymm) 
 eg:
@@ -153,6 +153,11 @@ eg：
 cal 2 2007 | grep -v "^$" | tail -1 | awk '{print $NF}'
 
 ```
+example (get last month last day) : 
+```
+month=$(expr `date +%m` - 1 )
+year=`date +%Y`
+day=`cal $month $year | grep -v "^$" | tail -1 | awk '{print $NF}'`
 
-
+```
 
