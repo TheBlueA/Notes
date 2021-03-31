@@ -149,6 +149,8 @@ eg:
 
 ```
 cal month(%m) 2007(year %Y) | grep -v "^$"(for del empty line) | tail -1 (get last line)| awk '{print $NF}' (get last day)
+awk '{print $NF}' to get value of  last column
+awk '{print NF}' to get columns number of last line  
 eg：
 cal 2 2007 | grep -v "^$" | tail -1 | awk '{print $NF}'
 
