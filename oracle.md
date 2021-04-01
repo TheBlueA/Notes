@@ -1,4 +1,4 @@
-### get past xxx table date
+### get past xxx date of table 
 ```
 select * from test as of timestamp sysdate-400/1440; 
 ```
