@@ -168,4 +168,11 @@ day=`cal $month $year | grep -v "^$" | tail -1 | awk '{print $NF}'`
 mkdir -p path
 ```
 
+### add access permission  for files
+```
+chmod 755 test.txt  #wxr-xr-xr
+chmod +x test.txt  # add execute permision
+```
+
+
 
