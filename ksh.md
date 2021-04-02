@@ -163,3 +163,9 @@ day=`cal $month $year | grep -v "^$" | tail -1 | awk '{print $NF}'`
 
 ```
 
+### if dir not exists then create 
+```
+mkdir -p path
+```
+
+
