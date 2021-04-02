@@ -130,7 +130,7 @@ send_email_withC1()
 + $$	当前Shell进程ID。对于 Shell 脚本，就是这些脚本所在的进程ID。
 
 ----
-tee 从标准输入设备读取数据，将其内容输出到标准输出设备
+### tee 从标准输入设备读取数据，将其内容输出到标准输出设备
 - -a或--append 　附加到既有文件的后面，而非覆盖它．
 - -i或--ignore-interrupts 　忽略中断信号。
 - --help 　在线帮助。
@@ -174,5 +174,10 @@ chmod 755 test.txt  #wxr-xr-xr
 chmod +x test.txt  # add execute permision
 ```
 
+
+### create a array
+```
+set -A arrName 'a' 'b' 'c'
+```
 
 
