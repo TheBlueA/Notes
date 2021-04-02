@@ -177,7 +177,9 @@ chmod +x test.txt  # add execute permision
 
 ### create a array
 ```
-set -A arrName 'a' 'b' 'c'
+1. set -A arrName 'a' 'b' 'c'
+2. sqls[0]='1';
+   sqls[1]='2';
 ```
 
 
