@@ -182,4 +182,23 @@ chmod +x test.txt  # add execute permision
    sqls[1]='2';
 ```
 
+### get size of string
+```
+echo ${#var}
+```
+
+### Array
+```
+  ${arr[*]}   ${arr[@]}	 # All of the items in the array
+  ${!arr[*]}           	 # All of the indexes in the array
+  ${#arr[*]}       	 # Number of items in the array
+  ${#arr[0]}       	 # Length of item zero```
+Note:
+   if  $* and $@  within a quoted string ,
+   "${arr[*]}" will returns all the items as a single word, 
+   "${arr[@]}" will return each item as a separate word
+    
+```
+
+
 
