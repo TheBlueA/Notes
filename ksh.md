@@ -200,5 +200,10 @@ Note:
     
 ```
 
+### get random password
+```
+openssl rand -base64 8
+   8 is length
+```
 
 
