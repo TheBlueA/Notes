@@ -207,4 +207,10 @@ openssl rand -base64 8
 NOTE:
 8 is length( Base64 then then produces **four bytes of output for every three bytes of input** – meaning that the number on the command line should be **3/4 of the desired password length** )
 
+### get file size
+```
+fileSize=`wc -c ${JOB_DATA}/ActiveCircuits-OMFS/$lastmonth.zip | awk '{print $1}'`
+fileSize=$(expr $fileSize / 1024 / 1024  )
+echo $fileSize
+```
 
