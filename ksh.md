@@ -214,3 +214,13 @@ fileSize=$(expr $fileSize / 1024 / 1024  )
 echo $fileSize
 ```
 
+
+### split zip file
+```
+split -b size(eg: 1024k/1M)  fileName.zip Prefix
+```
+
+
+
+
+
