@@ -39,4 +39,11 @@ exit;
 EOF
 ```
 
+### sqlplus &&1 ,sqlplus &&2
+```
+-- run sqlName.sql , let sqlplus &&1 ->spool off 's data save in file1,  sqlplus &&2 ->spool off 's data save in file2
+
+sqlplus dblink sqlName.sql file1  file2
+
+```
 
