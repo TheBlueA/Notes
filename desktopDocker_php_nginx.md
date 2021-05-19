@@ -47,4 +47,14 @@ eg:
 docker inspect --format='{{.NetworkSettings.IPAddress}}' myphp
 ```
 
+# connection mysql failed
 
+error message :
+
+SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client
+
+run sql in mysql : 
+```
+use mysql;
+ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
+```
