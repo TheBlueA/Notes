@@ -39,3 +39,58 @@ php -m | grep gd
    
 3. restart php container
    
+
+
+### nginx config craftCMS
+```
+server {
+    listen       80;
+    server_name  localhost;
+    root 		 /var/www/craft/web; # project web path
+    index 		index.html index.php;
+    charset utf-8;
+
+  
+	location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    access_log off;
+    error_log  /var/www/log/nginx/error.log error;
+
+    sendfile off;
+
+    client_max_body_size 10m;
+
+
+	gzip              on;
+    gzip_http_version 1.0;
+    gzip_proxied      any;
+    gzip_min_length   500;
+    gzip_disable      "MSIE [1-6]\.";
+    gzip_types        text/plain text/xml text/css
+                      text/comma-separated-values
+                      text/javascript
+                      application/x-javascript
+                      application/javascript
+                      application/atom+xml;
+
+
+    location ~ \.php$ {
+        fastcgi_pass   		172.17.0.3:9000; # php  ip 
+        fastcgi_param 	 	SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+        include        		fastcgi_params;
+		fastcgi_intercept_errors off;
+        fastcgi_buffer_size 16k;
+        fastcgi_buffers 4 16k;
+        fastcgi_read_timeout 300;
+    }
+
+	location ~ /\.ht {
+        deny all;
+    }
+
+}
+
+```
+
