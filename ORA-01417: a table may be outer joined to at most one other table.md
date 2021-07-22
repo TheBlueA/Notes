@@ -19,10 +19,10 @@ SELECT *
 
 ```
 Cause:
-acc's value acct and con are come from different table , and they are also join b and c 's condition, 
+acc's value acct and con are also join b's condition,but they are come from different table .So Oracle will treat acc as two tables join b.(error) 
 
 Solution :
-
+let acct and con come from a same table 
 
 
 
